@@ -16,7 +16,7 @@ app.post('/webhook', (req, res) => {
         // Logic for handling a different intent
         response = { /* ... */ };
     } else {
-        // Default response if the intent is not recognized
+        // Default response if the intent is not handled
         response = {
             "fulfillmentText": "I'm not sure how to respond to that. Would you like to open a ticket?"
         };
