@@ -39,15 +39,15 @@ def handle_message():
 
         # Log the response
         logger.info(f"Response: {response_messages}")
-        # Return the response messages as JSON
+        # Return response messages as JSON
         return jsonify({'messages': response_messages})
 
     except Exception as e:
-        # Log the error with traceback
+        # Log the error
         logger.error(f"Error: {str(e)}")
         logger.error(traceback.format_exc())
 
-        # Return an error response with the exception message
+        # Return an error response with default message
         error_message = f"An error occurred while processing your request: {str(e)}"
         return jsonify({'error': error_message}), 500
 
